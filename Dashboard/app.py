@@ -6,8 +6,14 @@ import plotly.express as px
 # CARGA DE DATOS
 # ==================================================
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+csv_file = BASE_DIR / "DatasetOilCostProjectWorldwide.csv"
+
 df = pd.read_csv(
-    "../DatasetOilCostProjectWorldwide.csv",
+    csv_file,
     sep=None,
     engine="python"
 )
